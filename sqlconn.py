@@ -23,11 +23,10 @@ class SQL:
         self.cursor = self.conn.cursor()
         
         with self.conn:
-            result = self.cursor.execute(query)
-            result_arr = []
-            for row in result:
-                result_arr.append(row)
-            return result_arr
+            self.cursor.execute(query)
+            data = self.cursor.fetchall()
+            columns = [column[0] for column in self.cursor.description]
+            return (columns, data)
 
 if __name__ == "__main__":
     SQLServer = SQL()

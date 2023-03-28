@@ -1,10 +1,21 @@
 {% extends 'base.html' %}
-
-{% block head %}
-<title>Index</title>
-<h1>Template</h1>
+{% block nav %}
+<ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="#" href="#">Home</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/explore">Explore</a>
+      </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/query">Query</a>
+    </li>
+  </ul>
 {% endblock %}
 
 {% block body %}
+<br/>
+<h1>Welcome to Online Bookstore Database</h1>
 
+<p> Explore Database </p>
 {% endblock %}
