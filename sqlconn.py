@@ -1,17 +1,17 @@
 import pyodbc as odbc
 
-# if odbc.drivers():
-#     print("--------------------------------------")
-#     print("List of Pyodbc driver in your machine:")
-#     for i in range(len(odbc.drivers())):
-#         print(i+1, odbc.drivers()[i])
-#     sql_driver = odbc.drivers()[0]
-#     print(f"Using {sql_driver}")
-#     print("--------------------------------------")
-# else:
-#     print("No Pyodbc driver in your machine, please install one before continuing.")
+if odbc.drivers():
+    print("--------------------------------------")
+    print("List of Pyodbc driver in your machine:")
+    for i in range(len(odbc.drivers())):
+        print(i+1, odbc.drivers()[i])
+    sql_driver = odbc.drivers()[0]
+    print("--------------------------------------")
+else:
+    print("No Pyodbc driver in your machine, please install one before continuing.")
 
 sql_driver = "ODBC Driver 17 for SQL Server"
+print(f"Using {sql_driver}")
 
 DRIVER_NAME = f'{sql_driver}'
 SERVER_NAME = 'database-1.ctfix6axgfer.ap-southeast-2.rds.amazonaws.com'
